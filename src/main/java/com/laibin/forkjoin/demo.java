@@ -1,5 +1,7 @@
 package com.laibin.forkjoin;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
@@ -30,7 +32,6 @@ public class demo {
         ForkJoinTask<Long> task = new Forkjoin(1L, 10_0000_0000L);
         ForkJoinTask<Long> submit = forkJoinPool.submit(task);
         Long sum = submit.get();
-
         long end = System.currentTimeMillis();
         System.out.println("sum= "+sum+" 时间："+(end-start));
     }
@@ -41,6 +42,7 @@ public class demo {
 
 
         long sum = LongStream.rangeClosed(1L, 10_0000_0000L).parallel().reduce(0, Long::sum);
+
 
         long end = System.currentTimeMillis();
         System.out.println("sum= "+sum+" 时间："+(end-start));
