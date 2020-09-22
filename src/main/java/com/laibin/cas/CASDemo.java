@@ -7,6 +7,9 @@ import java.util.concurrent.atomic.AtomicStampedReference;
 /**
  * CAS ABA问题（狸猫换太子）
  * 解决ABA问题：原子引用
+ * 线程一： A -> B
+ * 线程二： B -> A
+ * 线程三： A -> B
  * Integer问题 -128-127 IntegerCache.cache缓存
  */
 public class CASDemo {

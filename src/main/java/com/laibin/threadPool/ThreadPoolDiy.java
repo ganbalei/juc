@@ -1,5 +1,6 @@
 package com.laibin.threadPool;
 
+import java.util.Date;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -13,6 +14,11 @@ import java.util.concurrent.TimeUnit;
  */
 public class ThreadPoolDiy {
     public static void main(String[] args) {
+        Date date = new Date();
+        date.getTime();
+        System.currentTimeMillis();
+
+        System.out.println();
         // 自定义线程池 ThreadPoolExecutor
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(
                 2,

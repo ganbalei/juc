@@ -15,7 +15,7 @@ public class Unatomicity {
     private volatile static AtomicInteger num = new AtomicInteger();
 
     public static void add(){
-        num.getAndIncrement();//不是原子性操作
+        num.getAndIncrement();//是原子性操作
     }
 
     public static void main(String[] args) {

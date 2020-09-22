@@ -28,8 +28,6 @@ public class BlockingQueueDemo {
         System.out.println(queue.remove());
         //NoSuchElementException 使用remove会抛出异常
         //System.out.println(queue.remove());
-
-
     }
 
     /**

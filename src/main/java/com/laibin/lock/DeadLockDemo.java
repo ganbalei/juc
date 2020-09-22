@@ -12,11 +12,12 @@ import java.util.concurrent.TimeUnit;
 public class DeadLockDemo {
     public static void main(String[] args) {
 
+        String msgContent = String.format("完成进度%d/%d，继续加油@推广任务“转发%s：%s”，去推广>>", 500L, 1000, "直播间", "总部发布新的推广任务，请立即查看");
+        System.out.println(msgContent);
         String lockA = "lockA";
         String lockB = "lockB";
         new Thread(new MyThread(lockA, lockB), "T1").start();
         new Thread(new MyThread(lockB, lockA), "T2").start();
-
     }
 }
 
